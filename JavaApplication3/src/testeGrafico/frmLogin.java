@@ -37,14 +37,23 @@ public class frmLogin extends javax.swing.JFrame {
         btnEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEntrarActionPerformed(evt);
+                Conexao con = new Conexao();
+                System.out.println("TESTE!");        
+                 
+                
+                if(con.login(txtUsuario.getText(), txtSenha.getText())) {
+                    InterfacePrincipal p = new InterfacePrincipal(); 
+				p.show();
+                                
+            }
             }
         });
 
-        jLabel1.setText("Usu·rio:");
+        jLabel1.setText("Usu√°rio:"); 
 
         jLabel2.setText("Senha:");
 
-        jLabel3.setText("Se n„o possuir cadastro, ");
+        jLabel3.setText("Se n√£o possuir cadastro, ");
 
         lblCadastro.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lblCadastro.setText("clique aqui");

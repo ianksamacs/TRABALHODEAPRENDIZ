@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.awt.Image.*;
 
 
-public class InterfacePrincipal extends JFrame {
+public class InterfacePrincipal extends JFrame { 
 	
 	
 	private static final long serialVersionUID = 1L;

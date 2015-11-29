@@ -6,6 +6,12 @@ public class cadastroPlaca extends javax.swing.JFrame {
     
     public cadastroPlaca() {
         initComponents();
+            var1.setVisible(false);
+            var2.setVisible(false);
+            var3.setVisible(false);
+            jtfVar1.setVisible(false);
+            jtfVar2.setVisible(false);
+            jtfVar3.setVisible(false);
     }
 
     
@@ -27,13 +33,11 @@ public class cadastroPlaca extends javax.swing.JFrame {
         cboTipo = new javax.swing.JComboBox();
         btnSelecionar = new javax.swing.JButton();
         var1 = new javax.swing.JLabel();
-        jtfCodCpu = new javax.swing.JTextField();
+        jtfVar1 = new javax.swing.JTextField();
         var2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        jtfVar2 = new javax.swing.JTextField();
         var3 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        var4 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        jtfVar3 = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -78,14 +82,6 @@ public class cadastroPlaca extends javax.swing.JFrame {
             }
         });
 
-        var1.setText("jLabel8");
-
-        var2.setText("jLabel9");
-
-        var3.setText("jLabel10");
-
-        var4.setText("jLabel11");
-
         jLabel12.setText("CI");
 
         jLabel13.setText("Tipo");
@@ -108,9 +104,6 @@ public class cadastroPlaca extends javax.swing.JFrame {
             .addComponent(jSeparator2)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addComponent(jLabel3))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(243, 243, 243)
                         .addComponent(jLabel1))
@@ -167,18 +160,17 @@ public class cadastroPlaca extends javax.swing.JFrame {
                                             .addComponent(btnSelecionar)))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jtfCodCpu)
-                                            .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE))
-                                        .addGap(28, 28, 28)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(var2)
-                                            .addComponent(var4))
+                                            .addComponent(jtfVar1)
+                                            .addComponent(jtfVar3, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE))
+                                        .addGap(34, 34, 34)
+                                        .addComponent(var2)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
-                                            .addComponent(jTextField2)))))
-                            .addComponent(var3))))
-                .addContainerGap(46, Short.MAX_VALUE))
+                                        .addComponent(jtfVar2, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(var3)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -212,15 +204,13 @@ public class cadastroPlaca extends javax.swing.JFrame {
                 .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(var1)
-                    .addComponent(jtfCodCpu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfVar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(var2)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfVar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(var4)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(var3)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfVar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(var3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -244,12 +234,16 @@ public class cadastroPlaca extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSelecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelecionarActionPerformed
-        cboTipo.setSelectedIndex(1);
+        
         
         if(cboTipo.getSelectedIndex() == 0) {
             var1.setVisible(false);
             var2.setVisible(false);
             var3.setVisible(false);
+            jtfVar1.setVisible(false);
+            jtfVar2.setVisible(false);
+            jtfVar3.setVisible(false);
+            
         }
         
         if(cboTipo.getSelectedIndex() == 1) {
@@ -259,6 +253,10 @@ public class cadastroPlaca extends javax.swing.JFrame {
                 var2.setVisible(true);
                 var3.setText("MHz:");
                 var3.setVisible(true);
+                
+                jtfVar1.setVisible(true);
+                jtfVar2.setVisible(true);
+                jtfVar3.setVisible(true);
                
                 
         }
@@ -269,6 +267,10 @@ public class cadastroPlaca extends javax.swing.JFrame {
             var2.setVisible(true);
             var3.setText("Tipo:");
             var3.setVisible(true);
+            
+            jtfVar1.setVisible(true);
+                jtfVar2.setVisible(true);
+                jtfVar3.setVisible(true);
         }
         
         if(cboTipo.getSelectedIndex() == 3) {
@@ -278,6 +280,10 @@ public class cadastroPlaca extends javax.swing.JFrame {
             var2.setVisible(true);
             var3.setText("Capacidade");
             var3.setVisible(true);
+            
+                jtfVar1.setVisible(true);
+                jtfVar2.setVisible(true);
+                jtfVar3.setVisible(true);
         }
     }//GEN-LAST:event_btnSelecionarActionPerformed
 
@@ -335,15 +341,14 @@ public class cadastroPlaca extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jtfCnpj;
-    private javax.swing.JTextField jtfCodCpu;
     private javax.swing.JTextField jtfDesc;
     private javax.swing.JTextField jtfNome;
+    private javax.swing.JTextField jtfVar1;
+    private javax.swing.JTextField jtfVar2;
+    private javax.swing.JTextField jtfVar3;
     private javax.swing.JLabel lblCnpj;
     private javax.swing.JLabel lblDesc;
     private javax.swing.JLabel lblNome;
@@ -351,6 +356,5 @@ public class cadastroPlaca extends javax.swing.JFrame {
     private javax.swing.JLabel var1;
     private javax.swing.JLabel var2;
     private javax.swing.JLabel var3;
-    private javax.swing.JLabel var4;
     // End of variables declaration//GEN-END:variables
 }
