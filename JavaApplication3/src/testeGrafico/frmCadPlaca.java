@@ -60,7 +60,7 @@ public class frmCadPlaca extends javax.swing.JFrame {
 
         jButton3.setText("Cancelar");
 
-        jLabel1.setText("Descrição: ");
+        jLabel1.setText("Descriï¿½ï¿½o: ");
 
         jButton4.setText("Limpar");
 
@@ -70,7 +70,7 @@ public class frmCadPlaca extends javax.swing.JFrame {
         txtDescricao.setRows(5);
         jScrollPane1.setViewportView(txtDescricao);
 
-        cboTipo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Escolha um tipo...", "CPU", "Memória", "Interface" }));
+        cboTipo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Escolha um tipo...", "CPU", "Memï¿½ria", "Interface" }));
         cboTipo.setToolTipText("");
 
         jLabel3.setText("Nome:");
@@ -108,6 +108,8 @@ public class frmCadPlaca extends javax.swing.JFrame {
                 jTextField5ActionPerformed(evt);
             }
         });
+        cboTipo.setSelectedIndex(1);
+        
         if(cboTipo.getSelectedIndex() == 1) {
         	lblVaria1.setText("N_Bytes");
         }

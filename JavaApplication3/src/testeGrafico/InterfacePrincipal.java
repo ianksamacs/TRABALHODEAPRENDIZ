@@ -138,7 +138,7 @@ public class InterfacePrincipal extends JFrame {
 		
 		 		
 			       
-		JLabel lblTitulo = new JLabel("MENU RÃ�PIDO");
+		JLabel lblTitulo = new JLabel("MENU RÁPIDO");
 		lblTitulo.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		lblTitulo.setBounds(100, 30, 233, 45);
 		getContentPane().add(lblTitulo);
