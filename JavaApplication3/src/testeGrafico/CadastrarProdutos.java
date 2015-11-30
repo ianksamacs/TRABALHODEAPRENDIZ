@@ -57,24 +57,37 @@ public class CadastrarProdutos extends JFrame {
 		
 		btCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String login = (String)(Produto.getSelectedItem());
+				
 								
-				if(Produto.getSelectedItem().equals("Livros")) {
+				if(Produto.getSelectedItem().equals("Placa")) {
 					btCadastrar.addActionListener(new ActionListener() {
 						@Override
 						public void actionPerformed(ActionEvent arg0) {
-							
+							cadastroPlaca p = new cadastroPlaca();
+                                                        p.show();
+                                                        this.setVisible(false);
+                                                        
 							
 						}
+
+                                            private void setVisible(boolean b) {
+                                                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                                            }
 					});
 					
 				}
-				else if(Produto.getSelectedItem().equals("CD's/Dvd's")) {
+				else if(Produto.getSelectedItem().equals("Periféricos")) {
 					btCadastrar.addActionListener(new ActionListener() {
 						@Override
 						public void actionPerformed(ActionEvent arg0) {
-							
+							frmCadPeriferico p = new frmCadPeriferico();
+                                                        p.show();
+                                                        this.setVisible(false);
 						}
+
+                                            private void setVisible(boolean b) {
+                                                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                                            }
 					});
 				}
 				else {
